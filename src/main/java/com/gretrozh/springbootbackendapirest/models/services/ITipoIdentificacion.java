@@ -7,8 +7,8 @@ import java.util.List;
 public interface ITipoIdentificacion {
 
     List<Identificacion> findAll();
-    Identificacion findById(Long id);
+    Identificacion findById(Integer id);
     Identificacion save(Identificacion identificacion);
-    void delete(Long id);
+    void delete(Integer id);
 
 }
