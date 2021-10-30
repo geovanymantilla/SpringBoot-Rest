@@ -32,8 +32,14 @@ public class Alcaldia implements Serializable {
     public int getIdAlcaldia() {
         return idAlcaldia;
     }
+    
 
-    public void setIdAlcaldia(int idAlcaldia) {
+    public Alcaldia() {
+		super();
+	}
+
+
+	public void setIdAlcaldia(int idAlcaldia) {
         this.idAlcaldia = idAlcaldia;
     }
 
@@ -92,4 +98,13 @@ public class Alcaldia implements Serializable {
     public void setTelefono(String telefono) {
         this.telefono = telefono;
     }
+
+	@Override
+	public String toString() {
+		return "Alcaldia [idAlcaldia=" + idAlcaldia + ", alcalde=" + alcalde + ", correo=" + correo + ", direccion="
+				+ direccion + ", horarioAtencion=" + horarioAtencion + ", logo=" + logo + ", nombre=" + nombre
+				+ ", telefono=" + telefono + "]";
+	}
+    
+    
 }
