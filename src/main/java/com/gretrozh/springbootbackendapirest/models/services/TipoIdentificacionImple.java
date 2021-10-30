@@ -30,7 +30,7 @@ public class TipoIdentificacionImple implements  ITipoIdentificacion{
 
     @Override
     public void delete(Integer id) {
-
+    	System.out.println("esta llegando el id "+id);
         if(this.findById(id)==null)
             throw new RuntimeException("no s eencuentra el tipo de identificacion");
 
