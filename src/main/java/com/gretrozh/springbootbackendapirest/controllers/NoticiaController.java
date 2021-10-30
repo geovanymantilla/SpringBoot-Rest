@@ -38,7 +38,7 @@ public class NoticiaController {
  //Error al insertar dependecia de noticias
 	@Autowired
 	private NoticiaService noticiaService;
-	
+//Error al inyectar de pendencias	
 	@Autowired
 	private UsuarioService usuarioService;
 	
