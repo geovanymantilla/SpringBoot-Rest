@@ -35,7 +35,7 @@ import com.web.repository.services.UsuarioService;
 @RestController
 @RequestMapping("/noticia")
 public class NoticiaController {
-
+ //Error al insertar dependecia de noticias
 	@Autowired
 	private NoticiaService noticiaService;
 	
