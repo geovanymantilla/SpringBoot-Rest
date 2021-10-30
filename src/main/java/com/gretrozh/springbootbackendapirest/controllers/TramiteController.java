@@ -54,13 +54,14 @@ public class TramiteController {
 			
 		}
 	}
-	
+	// error no inyecta dependencias
 	@PostMapping("/paso/save/{idTramite}")
 	public ResponseEntity<?> guardarPaso(@PathVariable int idTramite,@RequestBody Paso paso){
 		Tramite traamite=this.tramiteService.findByid(idTramite);
 		Map <String,Object>map =new HashMap<>();
 		if(traamite==null) {
 			map.put("mensaje", "nose encontro el tramia al cual asignarse");
+			System.out.println(map);
 			return new ResponseEntity<Map <String,Object>>(map,HttpStatus.NOT_FOUND);
 		}
 		
