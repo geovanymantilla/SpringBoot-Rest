@@ -125,7 +125,9 @@ public class ClienteRestController {
 		try {
 			clienteActual.setApellido(cliente.getApellido());
 			clienteActual.setNombre(cliente.getNombre());
+			System.out.println("El nombre del cliente es actualizado"+cliente.getNombre() );
 			clienteActual.setEmail(cliente.getEmail());
+			System.out.println("El email del client es actualizado"+ cliente.getEmail());
 			clienteUpdated= clienteService.save(clienteActual);	
 			System.out.println("El cliente actual es "+ clienteActual);
 		} catch (DataAccessException e) {
