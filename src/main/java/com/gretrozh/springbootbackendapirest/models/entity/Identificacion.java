@@ -57,6 +57,13 @@ public class Identificacion {
 	public void setDireccion(String direccion) {
 		this.direccion = direccion;
 	}
+
+	@Override
+	public String toString() {
+		return "Identificacion [id=" + id + ", nombre=" + nombre + ", apellido=" + apellido + ", cedula=" + cedula
+				+ ", direccion=" + direccion + "]";
+	}
     
+	
     
 }
