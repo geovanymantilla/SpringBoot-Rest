@@ -86,6 +86,7 @@ public class NoticiaController {
 			
 			noticia.setUsuario(user);
 			noticia.setAlcaldia(user.getAlcaldia());
+			System.out.println("debug noticia a guardar "+ noticia);
 			noticiaService.save(noticia);
 			
 			List<Foto> fotos = new ArrayList<>();
@@ -96,6 +97,7 @@ public class NoticiaController {
 				f.setUsuario(user);	
 				System.out.println("GUARDO FOTO");
 				fotos.add(f);
+				System.out.println("Foto a agregar" + f);
 				fotoService.save(f);
 			}
 			noticia.setFotos(fotos);
