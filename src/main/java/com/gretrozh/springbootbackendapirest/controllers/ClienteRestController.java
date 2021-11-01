@@ -136,6 +136,7 @@ public class ClienteRestController {
 		
 		response.put("mensaje", "El cliente ha sido actualizado con exito");
 		response.put("cliente", clienteUpdated);
+		System.out.println("Cliente actualizado"+ clienteUpdated);
 		return new ResponseEntity<Map<String,Object>>(response, HttpStatus.OK) ; 
 	}
 
@@ -148,6 +149,7 @@ public class ClienteRestController {
 			clienteService.delete(id);
 		} catch (DataAccessException e) {
 			response.put("mensaje", "Error al eliminar el cliente en la base de datos");
+			System.out.println("Response is "+ response);
 			response.put("error", e.getMessage().concat(": ").concat(e.getMostSpecificCause().getMessage()));
 			return new ResponseEntity<Map<String, Object>>(response, HttpStatus.INTERNAL_SERVER_ERROR);
 		}
