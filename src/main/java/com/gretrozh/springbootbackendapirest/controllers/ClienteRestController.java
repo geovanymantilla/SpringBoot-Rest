@@ -129,6 +129,7 @@ public class ClienteRestController {
 			clienteActual.setEmail(cliente.getEmail());
 			System.out.println("El email del client es actualizado"+ cliente.getEmail());
 			clienteUpdated= clienteService.save(clienteActual);	
+			System.out.println("Imprimiendo el cliente actualizado"+ clienteUpdated);
 			System.out.println("El cliente actual es "+ clienteActual);
 		} catch (DataAccessException e) {
 			response.put("mensaje", "Error al actualizar el cliente en la base de datos");
